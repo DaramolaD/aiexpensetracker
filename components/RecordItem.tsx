@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Record } from '@/types/Record';
 import deleteRecord from '@/app/actions/deleteRecord';
+import { X } from 'lucide-react';
 
 // Helper function to get category emoji
 const getCategoryEmoji = (category: string) => {
@@ -58,20 +59,7 @@ const RecordItem = ({ record }: { record: Record }) => {
         {isLoading ? (
           <div className='w-3 h-3 border border-white/30 border-t-white rounded-full animate-spin'></div>
         ) : (
-          <svg
-            className='w-3 h-3 sm:w-4 sm:h-4'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M6 18L18 6M6 6l12 12'
-            />
-          </svg>
+          <X className='w-3 h-3 sm:w-4 sm:h-4' />
         )}
       </button>
 
